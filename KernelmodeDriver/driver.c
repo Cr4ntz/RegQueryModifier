@@ -29,7 +29,7 @@ NTSTATUS ExCallbackFunction(
 				PsLookupProcessByProcessId(pId, &procInfo);
 				SeLocateProcessImageName(procInfo, &pathName);
 
-				if (wcsstr(pathName->Buffer, L"spotterfy"))
+				if (wcsstr(pathName->Buffer, L"nameofappthattriestoqueryregistry"))
 				{
 					KEY_VALUE_PARTIAL_INFORMATION* keyPartial = (KEY_VALUE_PARTIAL_INFORMATION*)regPreInfo->KeyValueInformation;
 					keyPartial->Data[0] = 0;
